@@ -1,6 +1,4 @@
-import 'package:delhiverr/pages/deliveries.dart';
 import 'package:delhiverr/pages/home.dart';
-import 'package:delhiverr/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,11 +25,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blueGrey,
       ),
-      home: const Home(),
+      initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/home': (BuildContext ctx) => const Home(),
-        '/deliveries': (BuildContext ctx) => const Deliveries(),
-        '/profile': (BuildContext ctx) => const Profile()
+        '/': (BuildContext ctx) => const Home(),
       },
     );
   }
