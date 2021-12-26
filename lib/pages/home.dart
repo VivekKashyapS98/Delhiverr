@@ -1,6 +1,6 @@
-import 'package:delhiverr/widgets/home/booking.dart';
-import 'package:delhiverr/widgets/home/deliveries.dart';
-import 'package:delhiverr/widgets/home/profile.dart';
+import '../widgets/home/booking.dart';
+import '../widgets/home/deliveries.dart';
+import '../widgets/home/profile.dart';
 
 import 'package:flutter/material.dart';
 
@@ -38,18 +38,18 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-          'assets/logo/Delhiverr-logos_black.png',
+          'assets/logo/logo_black_transparent.png',
           height: 200,
         ),
-        backgroundColor: Colors.blueGrey.shade50,
-        foregroundColor: Colors.blueGrey.shade800,
+        backgroundColor: Colors.green.shade50,
+        foregroundColor: Colors.green.shade800,
         centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.domain_verification_rounded),
-            label: "Booking",
+            icon: Icon(Icons.featured_play_list_rounded),
+            label: "Requests",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_shipping_rounded),
@@ -63,6 +63,12 @@ class _HomeState extends State<Home> {
         currentIndex: _selectedIndex,
         onTap: (index) => _changeHomePage(index),
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/newRequest');
+          },
+          backgroundColor: Colors.green,
+          child: const Icon(Icons.add)),
       body: getPage(_selectedIndex),
     );
   }
