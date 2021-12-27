@@ -56,6 +56,15 @@ class Booking extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/requestDetails');
+                  },
+                  icon: const Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.blueGrey,
+                  ),
                 )
               ],
             ),
