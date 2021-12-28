@@ -5,8 +5,43 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Profile"),
+    return ListView(
+      children: [
+        Container(
+          height: 200,
+          color: Colors.blueGrey,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Vivek Kashyap",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blueGrey[50],
+                ),
+              ),
+              const CircleAvatar(
+                radius: 80,
+                backgroundImage:
+                    NetworkImage("https://i.imgur.com/7RE9KFw.jpg"),
+              )
+            ],
+          ),
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            child: const Center(
+              child: Text("Manage Addresses", style: TextStyle(fontSize: 18)),
+            ),
+          ),
+        ),
+        const Divider(
+          height: 5,
+        )
+      ],
     );
   }
 }

@@ -41,8 +41,8 @@ class _HomeState extends State<Home> {
           'assets/logo/logo_black_transparent.png',
           height: 200,
         ),
-        backgroundColor: Colors.green.shade50,
-        foregroundColor: Colors.green.shade800,
+        backgroundColor: Colors.teal.shade50,
+        foregroundColor: Colors.teal.shade800,
         centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
           onPressed: () {
             Navigator.pushNamed(context, '/newRequest');
           },
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.teal,
           child: const Icon(Icons.add)),
       body: getPage(_selectedIndex),
     );

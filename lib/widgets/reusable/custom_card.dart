@@ -8,8 +8,8 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: _cardChild,
-      elevation: 8,
-      color: Colors.green.shade50,
+      elevation: 5,
+      color: Colors.teal.shade50,
       margin: const EdgeInsets.all(10),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(

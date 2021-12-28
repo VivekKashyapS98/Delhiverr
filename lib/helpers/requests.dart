@@ -4,6 +4,7 @@ class Requests extends ChangeNotifier {
   final dynamic _requests = [
     {
       "id": "1111",
+      "description": "The package contains sensitive items. take it securely.",
       "customerName": "Vivek Kashyap",
       "fromAddress": {
         "address": "Bus stop, Doddahulluru(v), Hoskote(t)",
@@ -38,6 +39,7 @@ class Requests extends ChangeNotifier {
     },
     {
       "id": "2222",
+      "description": "Urgent delivery required.",
       "customerName": "Vivek Kashyap",
       "fromAddress": {
         "address": "Bus stop, Doddahulluru(v), Hoskote(t)",

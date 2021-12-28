@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Delhiverr',
         theme: ThemeData(
-          primarySwatch: Colors.green,
+          primarySwatch: Colors.teal,
           fontFamily: 'Nunito',
           textTheme: TextTheme(
             bodyText1: TextStyle(color: Colors.blueGrey.shade800),
