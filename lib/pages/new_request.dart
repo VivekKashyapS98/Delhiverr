@@ -17,7 +17,7 @@ class _NewRequestState extends State<NewRequest> {
           "New Request",
           style: TextStyle(fontWeight: FontWeight.w800),
         ),
-        backgroundColor: Colors.green.shade50,
+        backgroundColor: Colors.teal.shade50,
         foregroundColor: Colors.blueGrey.shade800,
         centerTitle: true,
       ),

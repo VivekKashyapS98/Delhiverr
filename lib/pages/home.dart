@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
       case 0:
         return const Booking();
       case 1:
-        return const Deliveries();
+        return Deliveries();
       case 2:
         return const Profile();
       default:

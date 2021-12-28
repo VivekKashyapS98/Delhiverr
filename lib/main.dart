@@ -1,3 +1,6 @@
+import 'package:delhiverr/widgets/home/running_details.dart';
+
+import './helpers/addressses.dart';
 import './helpers/requests.dart';
 import './widgets/booking/request_details.dart';
 import './pages/home.dart';
@@ -21,6 +24,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider.value(
           value: Requests(),
         ),
+        ChangeNotifierProvider.value(
+          value: Addresses(),
+        ),
       ],
       child: MaterialApp(
         title: 'Delhiverr',
@@ -36,7 +42,8 @@ class MyApp extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           '/': (BuildContext ctx) => const Home(),
           '/newRequest': (BuildContext ctx) => const NewRequest(),
-          '/requestDetails': (BuildContext ctx) => const RequestDetails()
+          '/requestDetails': (BuildContext ctx) => const RequestDetails(),
+          '/runningDetails': (BuildContext ctx) => const RunningDetails()
         },
       ),
     );

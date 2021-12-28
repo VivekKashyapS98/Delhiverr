@@ -34,13 +34,41 @@ class Profile extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: const Center(
-              child: Text("Manage Addresses", style: TextStyle(fontSize: 18)),
+              child: Text(
+                "Manage Addresses",
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
             ),
           ),
         ),
         const Divider(
-          height: 5,
-        )
+          height: 10,
+          thickness: 1,
+          indent: 20,
+          endIndent: 20,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            child: const Center(
+              child: Text(
+                "General Settings",
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ),
+        ),
+        const Divider(
+          height: 10,
+          thickness: 1,
+          indent: 20,
+          endIndent: 20,
+        ),
       ],
     );
   }

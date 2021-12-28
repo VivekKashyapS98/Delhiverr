@@ -1,7 +1,8 @@
 import 'dart:math';
-
+import 'dart:io';
 import 'package:delhiverr/helpers/requests.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 class CreateRequest extends StatefulWidget {
@@ -32,9 +33,16 @@ class _CreateRequestState extends State<CreateRequest> {
       "phoneNo": "",
       "isSelf": false
     },
-    // "acceptedDrivers": [],
+    "acceptedDrivers": [],
+    "createdAt": "",
     "containsNodes": false
   };
+
+  String _getFormattedDate() {
+    return DateFormat.yMMMMd(Platform.localeName)
+        .format(DateTime.now())
+        .toString();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -171,7 +179,7 @@ class _CreateRequestState extends State<CreateRequest> {
         ),
         ElevatedButton(
             onPressed: () {
-              print(_newRequest);
+              _newRequest["createdAt"] = _getFormattedDate();
               Provider.of<Requests>(context, listen: false)
                   .createNewRequest(_newRequest);
               Navigator.pop(context);

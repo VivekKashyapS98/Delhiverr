@@ -10,7 +10,7 @@ class CustomCard extends StatelessWidget {
       child: _cardChild,
       elevation: 5,
       color: Colors.teal.shade50,
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(10),
